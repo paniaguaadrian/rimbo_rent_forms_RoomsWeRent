@@ -4,10 +4,10 @@ import hbs from "nodemailer-express-handlebars";
 
 // * Rimbo rent emails
 // Production / Development
-// const rimboEmail = "info@rimbo.rent";
-// const RoomsEmail = "";
-const rimboEmail = "test@rimbo.rent";
-const roomsEmail = "test@rimbo.rent";
+const rimboEmail = "info@rimbo.rent";
+const roomsEmail = "roomswerent@gmail.com";
+// const rimboEmail = "test@rimbo.rent";
+// const roomsEmail = "test@rimbo.rent";
 // const rimboEmail = "paniaguasanchezadrian@gmail.com";
 // const roomsEmail = "paniaguasanchezadrian@gmail.com";
 
