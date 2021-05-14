@@ -388,8 +388,8 @@ text-decoration: none;
           <td valign="top" class="bg_white" style="padding: 0.5em 2.5em;">
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
-          			<td class="logo" style="text-align: center;">
-			            <img class='logo-image' src="cid:ukiologo"><a href="https://www.stayukio.com/"></a></img>
+          			<td class="logo" style="text-align: center; color: #6aa3a1; margin: 1rem; font-size: 1.5rem;">
+			            <h2>RoomsWeRent</h2>
 			          </td>
           		</tr>
           	</table>
@@ -417,7 +417,7 @@ text-decoration: none;
             	<tr>
             		<td>
             			<div class="text" style="padding: 0 3em; text-align: left;">
-							<h3>Buenas noticias {{tenantsFirstName}},</h3>			
+							<h3>¡Buenas noticias {{tenantsFirstName}}!</h3>			
             				
             			</div>
             		</td>
@@ -433,7 +433,7 @@ text-decoration: none;
 		          <tr>
 		            <td class="bg_white email-section">
 		            	<div class="heading-section" style="text-align: left; padding: 0 30px;">
-		              	<h3>Estamos muy contentos de que te quieras unir a la  comunidad de <b>{{agencyName}}</b>!</h3>
+		              	<h3>Estamos muy contentos de que te quieras unir a nosotros en <b>{{rentalAddress}}.</b></h3>
 
 		            	</div>
 		          </tr><!-- end: tr -->
@@ -443,7 +443,7 @@ text-decoration: none;
 		          <tr>
 		            <td class="bg_white email-section">
 		            	<div class="heading-section" style="text-align: left; padding: 0 30px; color: #6aa3a1;">
-		              	<h3><u>Un último paso importante…:</u></h3>
+		              	<h3><u>Solo falta un paso importante:</u></h3>
 						 
 		              	
 		            	</div>
@@ -459,13 +459,11 @@ text-decoration: none;
 						<td>
 							<div class="text" style="padding: 1em 3em; text-align: left;">
 								
-								<h3>En {{agencyName}} queremos que encontrar tu nueva casa sea una experiencia rápida y simple. <b>Es por eso que no requerimos fianza.</b></h3>
+								<h3>En {{agencyName}} creemos que no es necesario pagar por algo que todavía no ha ocurrido. <b>Es por eso que nuestras habitaciones no tienen depósito en efectivo.</b></h3>
 								<br>
-								<h3>Por supuesto, sigues siendo responsable de cuidar tu casa y pagar tu alquiler a tiempo, ¡pero nosotros confiamos en ti! No tendrás que pagar ninguna fianza en efectivo en ningún momento. Solo te pediremos que pagues en caso de que algo ocurra.</h3>
+								<h3>Sigues siendo responsable de cuidar la habitación y pagar tu alquiler a tiempo. Pero como en {{agencyName}} confiamos en nuestros inquilinos, no cobramos la fianza por adelantado, solo en caso de que algo ocurra.</h3>
 								<br>
-								<h3>Por favor, regístrate con tu tarjeta de débito pulsando el link al final del mail. La tarjeta debe estar conectada con tu cuenta principal (donde tienes tus ingresos o ahorros).</h3>
-								<br/>
-								<h3>Contacta con nosotros en caso de que tengas cualquier duda, ¡estamos aquí para ayudar!</h3>
+								<h3>Regístrate con tu tarjeta de débito pulsando el link al final del mail. La tarjeta debe estar conectada con tu cuenta principal (donde tienes tus ingresos o ahorros).</h3>
 								
 							</div>
 						</td>
@@ -491,7 +489,7 @@ text-decoration: none;
 
 		              	<button class='btn-rimbo' type="button"><a href="http://localhost:3000/register/card/{{randomID}}">¡Empieza ahora!(D)</a></button>
 
-						{{!-- <button class='btn-rimbo' type="button"><a href="https://ukiofrontend-dot-rimbo-partners.oa.r.appspot.com/register/card/{{randomID}}">¡Empieza ahora!</a></button> --}}
+						<button class='btn-rimbo' type="button"><a href="https://roomsfrontend-dot-rimbo-partners.oa.r.appspot.com/register/card/{{randomID}}">¡Empieza ahora!</a></button>
 
 						{{!-- <button class='btn-rimbo' type="button"><a href="https://ukio.rimbo.rent/register/card/{{randomID}}">¡Empieza ahora!</a></button> --}}
 
@@ -529,7 +527,7 @@ text-decoration: none;
 		          <tr>
 		            <td class="bg_white email-section">
 		            	<div class="heading-section" style="text-align: left; padding: 0 30px;">
-		              	<h3>We are very excited that you have decided to join the <b>{{agencyName}} community!</b></h3>
+		              	<h3>We are very excited that you want to join us in <b>{{rentalAddress}}.</b></h3>
 
 		            	</div>
 		          </tr><!-- end: tr -->
@@ -539,7 +537,7 @@ text-decoration: none;
 		          	<tr>
 		            	<td class="bg_white email-section">
 		            		<div class="heading-section" style="text-align: left; padding: 0 30px; color: #6aa3a1;">
-		              		<h3><u>One last important step…:</u></h3>
+		              		<h3><u>There is only one important step left:</u></h3>
 						 	</div>
 		          	</tr><!-- end: tr -->
 					</table>
@@ -550,13 +548,11 @@ text-decoration: none;
 						<td>
 							<div class="text" style="padding: 1em 3em; text-align: left;">
 								
-								<h3>At {{agencyName}} we want to make finding your new home a quick and seamless experience... <b>This is why we don´t ask you for a deposit.</b></h3>
+								<h3>At {{agencyName}} we believe you shouldn’t pay for something that hasn’t happened yet. This is why our rooms are deposit-free.</h3>
 								<br>
-								<h3>Of course, you are responsible for taking care of your Ukio home  and paying your rent on time, but  we trust you! We won’t ask you to pay any deposit upfront. You’d be asked to pay only in case something happens.</h3>
+								<h3>Just as always, you are responsible for taking care of the room and paying your rent on time. But since we at {{agencyName}} trust our tenants, we won’t ask you to pay any deposit upfront, only in case something happens.</h3>
 								<br>
-								<h3>Please register by clicking on the following link and entering your debit card details. The card must be connected to your main bank account (where you keep your savings or monthly income).</h3>
-								<br/>
-								<h3>Please feel free to reach out with any questions - we're here to help.</h3>
+								<h3>Register by clicking on the following link and entering your debit card details. The card must be connected to your main bank account (where you keep your savings and monthly income).</h3>
 								
 							</div>
 						</td>
@@ -582,7 +578,7 @@ text-decoration: none;
 
 		              	<button class='btn-rimbo' type="button"><a href="http://localhost:3000/register/card/{{randomID}}">Start now!(D)</a></button>
 
-						{{!-- <button class='btn-rimbo' type="button"><a href="https://ukiofrontend-dot-rimbo-partners.oa.r.appspot.com/register/card/{{randomID}}">Start now!</a></button> --}}
+						<button class='btn-rimbo' type="button"><a href="https://roomsfrontend-dot-rimbo-partners.oa.r.appspot.com/register/card/{{randomID}}">Start now!</a></button>
 
 						{{!-- <button class='btn-rimbo' type="button"><a href="https://ukio.rimbo.rent/register/card/{{randomID}}">Start now!</a></button> --}}
 
@@ -637,7 +633,7 @@ text-decoration: none;
                       	<h3 class="heading">Useful Links</h3>
                       	<ul>
 					                <li><a href="http://www.rimbo.rent">Rimbo Rent</a></li>
-					                <li><a href="https://www.stayukio.com/">UKIO</a></li>
+					                <li><a href="https://www.facebook.com/roomswerent/">RoomsWeRent</a></li>
 					                
 					              </ul>
                       </td>
