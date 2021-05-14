@@ -1,5 +1,6 @@
 @import "../../styles/variables";
 @import "../../styles/_breakpoint";
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
 
 .NavBarContainer {
   margin-top: 2.5rem;
@@ -8,8 +9,8 @@
   flex-direction: row;
   justify-content: space-between;
   @include xl {
-    margin-top: 1rem;
-    padding: 0 1rem;
+    margin-top: 2rem;
+    padding: 0 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -19,7 +20,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 3rem;
+    margin-left: 1rem;
     .LogoImage {
       height: 4rem !important;
       // margin-left: 2rem;
@@ -29,6 +30,7 @@
       }
     }
     p {
+      font-family: "Berkshire Swash", cursive;
       font-size: 2.2rem;
       margin-left: 0.5rem;
     }

@@ -4,13 +4,13 @@
   "submitButton": "Enviar",
   "authorize": "Enviar datos",
   "Home": {
-    "header": "Ukio & Rimbo - The new way of renting",
-    "title": "Bienvenid@ a la unión entre Ukio y Rimbo",
+    "header": "RoomsWeRent & Rimbo - The new way of renting",
+    "title": "Bienvenid@ a la unión entre RoomsWeRent y Rimbo",
     "subtitle": "Disfruta de la nueva forma de alquiler",
     "text": "Cualquier duda que tengas, ponte en contacto con nosotros"
   },
   "F1SC": {
-    "helmet": "Nuevo alquiler - Ukio & Rimbo - The new way of rent",
+    "helmet": "Nuevo alquiler - RoomsWeRent & Rimbo - The new way of rent",
     "header": {
       "title": "Registra a tu inquilino",
       "subtitleOne": "Completa los campos.",
@@ -104,10 +104,10 @@
     "subtitle": "We will send an email to the tenant to register the debit card with us"
   },
   "F2TT": {
-    "header": "Nuevo inquilino - Ukio & Rimbo - The new way of rent",
+    "header": "Nuevo inquilino - RoomsWeRent & Rimbo - The new way of rent",
     "titleOne": "¡Alquila este apartamento ",
     "titleTwo": "sin pagar fianza",
-    "leftTextOne": "Estamos muy ilusionados de que hayas decidido alquilar con UKIO y queremos hacerlo de la manera más fácil y asequible posible para ti.",
+    "leftTextOne": "Estamos muy ilusionados de que hayas decidido alquilar con RoomsWeRent y queremos hacerlo de la manera más fácil y asequible posible para ti.",
     "leftTextTwo": "Por este motivo nuestras propiedades no tienen fianza.",
     "leftTextThree": "Con nosotros no tienes que adelantar la fianza. Solo tienes que registrar tu tarjeta de débito.",
     "name": "Nombre Completo: ",
@@ -125,12 +125,12 @@
     "checkBoxFive": "de Rimbo Rent"
   },
   "cardsuccess": {
-    "title": "¡Ya eres parte de Ukio!",
+    "title": "¡Ya eres parte de RoomsWeRent!",
     "textOne": "Genial, ¡hemos recibido tus detalles!",
     "textTwo": " Nos pondremos en contacto contigo en breve para completar el proceso."
   },
   "404Page": {
-    "header": "404 error page - Ukio & Rimbo",
+    "header": "404 error page - RoomsWeRent & Rimbo",
     "title": "404 - La página a la que intentas acceder no existe 😔",
     "subtitle": "Por favor vuelve a cargar el último enlace que has recibido o ponte en contacto con nosotros a:",
     "paragraphEmail": "info@rimbo.rent",

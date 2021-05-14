@@ -2,7 +2,6 @@
 import React from "react";
 
 // Images
-import UkioLogo from "../../images/ukio_logo.jpeg";
 import SpanishLogo from "../../images/spanish-language.png";
 import EnglishLogo from "../../images/english-language.png";
 
@@ -21,8 +20,7 @@ const NavBar = () => {
   return (
     <div className={styles.NavBarContainer}>
       <div className={styles.LogoContainer}>
-        <img className={styles.LogoImage} src={UkioLogo} alt="Ukio Logo" />
-        <p>ukio</p>
+        <p>RoomsWeRent</p>
       </div>
 
       <div className={styles.ToggleButtonContainer}>

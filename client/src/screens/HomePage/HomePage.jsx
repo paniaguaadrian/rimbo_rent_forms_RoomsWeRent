@@ -9,7 +9,7 @@ import CustomHelmet from "../../components/Helmet/CustomHelmet";
 import { withNamespaces } from "react-i18next";
 
 // Images
-import UkioImage from "../../images/undraw_neighbors_ciwb.svg";
+import WeRentImage from "../../images/undraw_apartment_rent_o0ut.svg";
 
 const HomePage = ({ t }) => {
   return (
@@ -20,7 +20,7 @@ const HomePage = ({ t }) => {
         title={t("Home.title")}
         subtitle={t("Home.subtitle")}
         text={t("Home.text")}
-        imageSRC={UkioImage}
+        imageSRC={WeRentImage}
         imageAlt="Ukio image"
       />
       <Footer />

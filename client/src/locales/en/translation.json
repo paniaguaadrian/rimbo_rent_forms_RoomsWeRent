@@ -4,13 +4,13 @@
   "submitButton": "Send",
   "authorize": "Send data",
   "Home": {
-    "header": "Ukio & Rimbo - The new way of renting",
-    "title": "Welcome to the union between Ukio and Rimbo",
+    "header": "RoomsWeRent & Rimbo - The new way of renting",
+    "title": "Welcome to the union between RoomsWeRent and Rimbo",
     "subtitle": "Enjoy the new way of renting",
     "text": "In case you have any questions, please get in touch with us"
   },
   "F1SC": {
-    "helmet": "New tenancy - Ukio & Rimbo - The new way of rent",
+    "helmet": "New tenancy - RoomsWeRent & Rimbo - The new way of rent",
     "header": {
       "title": "List your tenant",
       "subtitleOne": "Fill out the fields.",
@@ -50,7 +50,7 @@
     },
     "stepTwo": {
       "service": "Choose service",
-      "servicePL": "Select a Ukio service",
+      "servicePL": "Select a RoomsWeRent service",
       "rentDuration": "Duration rental agreement (years)",
       "rentDurationPL": "Enter duration",
       "completeRentalAddress": "Address of the property",
@@ -114,10 +114,10 @@
     "subtitle": "We will send an email to the tenant to register the debit card with us"
   },
   "F2TT": {
-    "header": "New tenant - Ukio & Rimbo - The new way of rent",
+    "header": "New tenant - RoomsWeRent & Rimbo - The new way of rent",
     "titleOne": "Rent this property ",
     "titleTwo": "deposit-free",
-    "leftTextOne": "We are excited about your upcoming move with Ukio and we want to make it as easy and cost-effective for you as possible!",
+    "leftTextOne": "We are excited about your upcoming move with RoomsWeRent and we want to make it as easy and cost-effective for you as possible!",
     "leftTextTwo": "This is why this property is deposit-free.",
     "leftTextThree": "No need to pay any deposit upfront. Just register with your debit card details.",
     "name": "Full name: ",
@@ -135,12 +135,12 @@
     "checkBoxFive": "of Rimbo Rent"
   },
   "cardsuccess": {
-    "title": "You are already part of Ukio!",
+    "title": "You are already part of RoomsWeRent!",
     "textOne": "Awesome, we have received your details!",
     "textTwo": "We will get in touch with you shortly to complete the process."
   },
   "404Page": {
-    "header": "404 error page - Ukio & Rimbo",
+    "header": "404 error page - RoomsWeRent & Rimbo",
     "title": "Error 404 - The page you are looking for doesn't exist 😔",
     "subtitle": "Please, reload the latest link you have received, or get in touch with us:",
     "paragraphEmail": "info@rimbo.rent",
