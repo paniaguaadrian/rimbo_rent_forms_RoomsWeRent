@@ -122,7 +122,6 @@ const RegisterTenantCard = ({ t }) => {
       const { data: tenancyData } = await fetchUserData();
 
       const postBody = {
-        // use some logic based on tenancyData here to make the postBody
         isTrying: tenant.isTrying,
         randomID: tenancyData.tenant.randomID,
       };
@@ -344,19 +343,7 @@ const RegisterTenantCard = ({ t }) => {
                           onChange={handleCardDetailsChange}
                           className={style.tarjeta}
                         />
-                        {tenancyData.product.slice(0, 1) === "1" ? (
-                          <p>
-                            {t("F2TT.warningcreditcard")}
-                            {tenancyData.product.slice(0, 1)}
-                            {t("F2TT.warningcreditcardTwo")}
-                          </p>
-                        ) : (
-                          <p>
-                            {t("F2TT.warningcreditcard")}
-                            {tenancyData.product.slice(0, 1)}
-                            {t("F2TT.warningcreditcardThree")}
-                          </p>
-                        )}
+                        <p>{t("F2TT.warningcreditcard")}</p>
                       </label>
 
                       <div className={style.ErrorInput}>

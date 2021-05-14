@@ -6,7 +6,7 @@ import {
 } from "./constants";
 
 export const DefaultTenancy = {
-  agencyName: "UKIO",
+  agencyName: "RoomsWeRent",
   tenancyID: "",
 
   propertyDetails: {
@@ -15,7 +15,6 @@ export const DefaultTenancy = {
     rentAmount: "",
     rentStartDate: "",
     rentEndDate: "",
-    product: "",
   },
 
   tenantContactDetails: {
@@ -27,6 +26,7 @@ export const DefaultTenancy = {
   },
 
   tenantPersonalDetails: {
+    tenantsAddress: "",
     documentType: "",
     documentNumber: "",
     monthlyNetIncome: "",

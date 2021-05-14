@@ -1,6 +1,6 @@
 @import "../../styles/variables";
 @import "../../styles/_breakpoint";
-@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
 .NavBarContainer {
   margin-top: 2.5rem;
@@ -30,8 +30,9 @@
       }
     }
     p {
-      font-family: "Berkshire Swash", cursive;
-      font-size: 2.2rem;
+      font-family: "Oswald", sans-serif;
+      font-size: 2.5rem;
+      font-weight: 400;
       margin-left: 0.5rem;
     }
   }

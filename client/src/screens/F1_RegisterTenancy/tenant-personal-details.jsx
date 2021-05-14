@@ -35,7 +35,7 @@ import PlacesAutocomplete, {
 const {
   REACT_APP_BASE_URL,
   REACT_APP_API_RIMBO_TENANCY,
-  REACT_APP_API_RIMBO_TENANCY_UKIO,
+  REACT_APP_API_RIMBO_TENANCY_ROOMS,
   REACT_APP_API_RIMBO_TENANT,
   REACT_APP_BASE_URL_EMAIL,
 } = process.env;
@@ -82,6 +82,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
 
       setTenantsZipCode(results[0].address_components[6].long_name);
       setTenantsAddress(finalAddress);
+      tenancy.tenantPersonalDetails.tenantsAddress = finalAddress;
     }
     // console.log(tenantsAddress);
     // setTenantsAddress(finalAddress);
@@ -131,7 +132,6 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         randomID: data.tenant.randomID,
         //  Tenancy
         rentAmount: data.rentAmount,
-        product: data.product,
         rentStartDate: data.rentStartDate.slice(0, 10),
         rentEndDate: data.rentEndDate.slice(0, 10),
         tenancyID: data.tenancyID,
@@ -159,7 +159,6 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         randomID: data.tenant.randomID,
         //  Tenancy
         rentAmount: data.rentAmount,
-        product: data.product,
         rentStartDate: data.rentStartDate.slice(0, 10),
         rentEndDate: data.rentEndDate.slice(0, 10),
         tenancyID: data.tenancyID,
@@ -183,7 +182,6 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
       })
       .then((responseData) => {
         setResponseData(responseData);
-        // setSent((prevSent) => !prevSent);
         return responseData; // return data from here
       })
       .catch((err) => console.log(err));
@@ -199,7 +197,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
 
     //  Send regular data to DB
     await axios.post(
-      `${REACT_APP_BASE_URL}${REACT_APP_API_RIMBO_TENANCY_UKIO}`,
+      `${REACT_APP_BASE_URL}${REACT_APP_API_RIMBO_TENANCY_ROOMS}`,
       {
         //  Agency
         agencyName: tenancy.agencyName,
@@ -221,7 +219,6 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         rentAmount: tenancy.propertyDetails.rentAmount,
         rentStartDate: tenancy.propertyDetails.rentStartDate,
         rentEndDate: tenancy.propertyDetails.rentEndDate,
-        product: tenancy.propertyDetails.product,
         tenancyID: randomID,
         // Property
         rentalAddress: tenancy.propertyDetails.rentalAddress,
