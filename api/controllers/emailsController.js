@@ -6,10 +6,10 @@ import hbs from "nodemailer-express-handlebars";
 // Production / Development
 // const rimboEmail = "info@rimbo.rent";
 // const RoomsEmail = "";
-// const rimboEmail = "victor@rimbo.rent";
-// const RoomsEmail = "victor@rimbo.rent";
-const rimboEmail = "paniaguasanchezadrian@gmail.com";
-const roomsEmail = "paniaguasanchezadrian@gmail.com";
+const rimboEmail = "test@rimbo.rent";
+const roomsEmail = "test@rimbo.rent";
+// const rimboEmail = "paniaguasanchezadrian@gmail.com";
+// const roomsEmail = "paniaguasanchezadrian@gmail.com";
 
 // ? =======>  SPANISH VERSION START ==============================>
 // ! F1SC Form => E1R (email to Rimbo) E1SC (email to RoomsWeRent)
@@ -54,6 +54,14 @@ const sendF1SCFormEmails = async (req, res) => {
     })
   );
 
+  const transporterE2TT = nodemailer.createTransport(
+    sgTransport({
+      auth: {
+        api_key: process.env.SENDGRID_API,
+      },
+    })
+  );
+
   let optionsE1R = {
     viewEngine: {
       extname: ".handlebars",
@@ -72,8 +80,18 @@ const sendF1SCFormEmails = async (req, res) => {
     viewPath: "views/",
   };
 
+  let optionsE2TT = {
+    viewEngine: {
+      extname: ".handlebars",
+      layoutsDir: "views/",
+      defaultLayout: "E2TTEmail",
+    },
+    viewPath: "views/",
+  };
+
   transporterE1R.use("compile", hbs(optionsE1R));
   transporterE1SC.use("compile", hbs(optionsE1SC));
+  transporterE2TT.use("compile", hbs(optionsE2TT));
 
   const RimboEmail = {
     from: "RoomsWeRent & Rimbo info@rimbo.rent",
@@ -135,6 +153,26 @@ const sendF1SCFormEmails = async (req, res) => {
     },
   };
 
+  const TenantEmail = {
+    from: "RoomsWeRent & Rimbo info@rimbo.rent",
+    to: tenantsEmail, // tenants Email
+    subject:
+      "Bienvenido a la revolución de los depósitos - Welcome to the deposit revolution",
+    template: "E2TTEmail",
+    context: {
+      tenantsFirstName,
+      tenantsLastName,
+      tenantsEmail,
+      randomID,
+      agencyName,
+      rentalAddress,
+      room,
+      tenancyID,
+      rentStartDate,
+      rentEndDate,
+    },
+  };
+
   transporterE1R.sendMail(RimboEmail, (err, data) => {
     if (err) {
       console.log("There is an error here...!" + err);
@@ -144,6 +182,14 @@ const sendF1SCFormEmails = async (req, res) => {
   });
 
   transporterE1SC.sendMail(RoomsEmail, (err, data) => {
+    if (err) {
+      console.log("There is an error here...!" + err);
+    } else {
+      console.log("Email sent!");
+    }
+  });
+
+  transporterE2TT.sendMail(TenantEmail, (err, data) => {
     if (err) {
       console.log("There is an error here...!" + err);
     } else {
@@ -360,8 +406,8 @@ const sendF2SCFormEmails = async (req, res) => {
     subject: `Bienvenido a ${agencyName} & Rimbo`,
     attachments: [
       {
-        filename: "Reglas_Generales_y_Guia_Inquilino_Rimbo.pdf",
-        path: "./views/images/Reglas_Generales_y_Guia_Inquilino_Rimbo.pdf",
+        filename: "Inquilino_Guía_&_Reglas_Generales.pdf",
+        path: "./views/images/Inquilino_Guía_&_Reglas_Generales.pdf",
       },
     ],
     template: "E3TTEmail",
@@ -463,6 +509,14 @@ const sendF1SCFormEmailsEn = async (req, res) => {
     })
   );
 
+  const transporterE2TT = nodemailer.createTransport(
+    sgTransport({
+      auth: {
+        api_key: process.env.SENDGRID_API,
+      },
+    })
+  );
+
   let optionsE1R = {
     viewEngine: {
       extname: ".handlebars",
@@ -481,8 +535,18 @@ const sendF1SCFormEmailsEn = async (req, res) => {
     viewPath: "views/",
   };
 
+  let optionsE2TT = {
+    viewEngine: {
+      extname: ".handlebars",
+      layoutsDir: "views/",
+      defaultLayout: "E2TTEmailEn",
+    },
+    viewPath: "views/",
+  };
+
   transporterE1R.use("compile", hbs(optionsE1R));
   transporterE1SC.use("compile", hbs(optionsE1SC));
+  transporterE2TT.use("compile", hbs(optionsE2TT));
 
   const RimboEmail = {
     from: "RoomsWeRent & Rimbo info@rimbo.rent",
@@ -544,6 +608,25 @@ const sendF1SCFormEmailsEn = async (req, res) => {
     },
   };
 
+  const TenantEmail = {
+    from: "RoomsWeRent & Rimbo info@rimbo.rent",
+    to: tenantsEmail, // Tenants Email
+    subject: "Welcome to the deposit revolution",
+    template: "E2TTEmailEn",
+    context: {
+      tenantsFirstName,
+      tenantsLastName,
+      tenantsEmail,
+      randomID,
+      agencyName,
+      rentalAddress,
+      room,
+      tenancyID,
+      rentStartDate,
+      rentEndDate,
+    },
+  };
+
   transporterE1R.sendMail(RimboEmail, (err, data) => {
     if (err) {
       console.log("There is an error here...!" + err);
@@ -553,6 +636,14 @@ const sendF1SCFormEmailsEn = async (req, res) => {
   });
 
   transporterE1SC.sendMail(RoomsEmail, (err, data) => {
+    if (err) {
+      console.log("There is an error here...!" + err);
+    } else {
+      console.log("Email sent!");
+    }
+  });
+
+  transporterE2TT.sendMail(TenantEmail, (err, data) => {
     if (err) {
       console.log("There is an error here...!" + err);
     } else {
@@ -768,8 +859,8 @@ const sendF2SCFormEmailsEn = async (req, res) => {
     subject: `Welcome to ${agencyName} & Rimbo`,
     attachments: [
       {
-        filename: "General_Rules_and_Guidelines_Tenant_Rimbo.pdf",
-        path: "./views/images/General_Rules_and_Guidelines_Tenant_Rimbo.pdf",
+        filename: "Tenant_General_Rules_&_Guidelines.pdf",
+        path: "./views/images/Tenant_General_Rules_&_Guidelines.pdf",
       },
     ],
     template: "E3TTEmailEn",
