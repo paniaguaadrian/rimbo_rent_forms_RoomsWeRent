@@ -37,42 +37,28 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
 
     const addressComponents = results[0].address_components;
 
-    const route = "route";
-    const locality = "locality";
-    const streetNumber = "street_number";
-    const postalCode = "postal_code";
+    addressComponents.forEach((component) => {
+      if (component.types[0].includes("locality")) {
+        tenancy.propertyDetails.rentalCity = component.long_name;
+      }
 
-    if (
-      addressComponents[0].types[0] === route &&
-      addressComponents[1].types[0] === locality
-    ) {
-      tenancy.propertyDetails.rentalPostalCode = "";
-      tenancy.propertyDetails.rentalAddress = results[0].formatted_address;
-      setRentalPostalCode("");
-      setRentalAddress(results[0].formatted_address);
-      setRentalCity(results[0].address_components[1].long_name);
-    } else if (
-      addressComponents[0].types[0] === streetNumber && // number
-      addressComponents[1].types[0] === route && // Street
-      addressComponents[2].types[0] === locality && // Barcelona
-      addressComponents[6].types[0] === postalCode
-    ) {
-      tenancy.propertyDetails.rentalPostalCode =
-        results[0].address_components[6].long_name;
-      tenancy.propertyDetails.rentalAddress = results[0].formatted_address;
-      tenancy.propertyDetails.rentalCity =
-        results[0].address_components[2].long_name;
+      if (component.types[0].includes("street_number")) {
+        tenancy.propertyDetails.streetNumber = component.long_name;
+      }
 
-      const street = results[0].address_components[1].long_name;
-      const streetNumber = results[0].address_components[0].long_name;
-      const city = results[0].address_components[2].long_name;
-      const finalAddress = `${street}, ${streetNumber}, ${city}`;
+      if (component.types[0].includes("route")) {
+        tenancy.propertyDetails.route = component.long_name;
+      }
 
-      setRentalPostalCode(results[0].address_components[6].long_name);
+      if (component.types[0].includes("postal_code")) {
+        tenancy.propertyDetails.rentalPostalCode = component.long_name;
+      }
+
+      const finalAddress = `${tenancy.propertyDetails.route}, ${tenancy.propertyDetails.streetNumber}, ${tenancy.propertyDetails.rentalCity}, ${tenancy.propertyDetails.rentalPostalCode}`;
+
       setRentalAddress(finalAddress);
-      setRentalCity(results[0].address_components[2].long_name);
       tenancy.propertyDetails.rentalAddress = finalAddress;
-    }
+    });
   };
 
   // Handle on change
