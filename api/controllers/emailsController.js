@@ -5,7 +5,7 @@ import hbs from "nodemailer-express-handlebars";
 // * Rimbo rent emails
 // Production / Development
 const rimboEmail = "info@rimbo.rent";
-const roomsEmail = "roomswerent@gmail.com";
+const roomsEmail = "roomswerentpagos@gmail.com";
 // const rimboEmail = "test@rimbo.rent";
 // const roomsEmail = "test@rimbo.rent";
 // const rimboEmail = "paniaguasanchezadrian@gmail.com";
@@ -237,6 +237,7 @@ const sendE1REmailEmails = async (req, res) => {
   const TenantEmail = {
     from: "RoomsWeRent & Rimbo info@rimbo.rent",
     to: tenantsEmail, // tenants Email
+    bcc: rimboEmail,
     subject:
       "Bienvenido a la revolución de los depósitos - Welcome to the deposit revolution",
     template: "E2TTEmail",

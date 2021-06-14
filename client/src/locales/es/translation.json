@@ -91,7 +91,7 @@
       "documentNumber": "Número de documento",
       "documentNumberPL": "Escribe el número del documento",
       "DF": "DNI/NIE/Pasaporte (Frontal)",
-      "DB": "DNI/NIE/Pasaporte (Atrás)"
+      "DB": "DNI/NIE (Atrás)"
     },
     "completed": {
       "header": "Tenant approved by Rimbo",
